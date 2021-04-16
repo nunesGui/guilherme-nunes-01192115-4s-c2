@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aplicativo dos Dogs!"
+        android:textSize="30sp"
+        android:id="@+id/tv_titulo"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar Cachorro"
+        android:id="@+id/btn_cadastro"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo"
+        android:layout_marginTop="10dp"
+        android:onClick="cadastro"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listar Cachorros"
+        android:id="@+id/btn_listar"
+        app:layout_constraintTop_toBottomOf="@id/btn_cadastro"
+        android:layout_marginTop="10dp"
+        android:onClick="irTelaLista"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

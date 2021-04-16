@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroCachorro">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastre seu cachorro!"
+        android:textSize="30sp"
+        android:id="@+id/tv_tituloCadastro"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Insira a raça do Cachorro"
+        android:textSize="25sp"
+        android:id="@+id/et_raca"
+        app:layout_constraintTop_toBottomOf="@id/tv_tituloCadastro"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Insira o preço médio do Cachorro"
+        android:textSize="25sp"
+        android:id="@+id/et_preco"
+        app:layout_constraintTop_toBottomOf="@id/et_raca"
+        android:layout_marginTop="20dp"
+        />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="É indicado para crianças?"
+        android:id="@+id/sw_indicacao"
+        app:layout_constraintTop_toBottomOf="@id/et_preco"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar Cachorro"
+        android:id="@+id/btn_cadastro"
+        app:layout_constraintTop_toBottomOf="@id/sw_indicacao"
+        android:layout_marginTop="20dp"
+        android:onClick="cadastrar"
+        />
+
+    <ImageView
+        android:id="@+id/iv_cachorro"
+        android:layout_width="369dp"
+        android:layout_height="324dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/feliz"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/btn_cadastro"
+        tools:layout_editor_absoluteX="21dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cachorro cadastrado com sucesso!"
+        app:layout_constraintTop_toBottomOf="@id/iv_cachorro"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
